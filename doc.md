@@ -391,7 +391,7 @@ export default store;
 
 ### 3.1 index.js
 
--   [index.js](https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/index.js)
+-   [index.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/index.js)
 
 ```
 export { default } from './middleware';
@@ -399,7 +399,7 @@ export { default } from './middleware';
 
 ### 3.2 middleware.js
 
--   [middleware.js](https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/middleware.js)
+-   [middleware.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/middleware.js)
 
 ```
 import { stdChannel } from './channel';
@@ -437,7 +437,7 @@ export default sagaMiddlewareFactory;
 
 ### 3.3 channel.js
 
--   [channel.js](https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/channel.js)
+-   [channel.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/channel.js)
 
 ```
 export function stdChannel() {
@@ -470,7 +470,7 @@ export function stdChannel() {
 
 ### 3.4 runSaga.js
 
--   [runSaga.js](https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/runSaga.js)
+-   [runSaga.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/runSaga.js)
 
 ```
 import proc from './proc';
@@ -493,7 +493,6 @@ export function runSaga(
 ```
 
 #### 3.5 effectTypes.js
-
 src\redux-saga\effectTypes.js
 
 ```
@@ -503,7 +502,7 @@ export const PUT = 'PUT';
 
 ### 3.6 effectRunnerMap.js
 
--   [effectRunnerMap.js](https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/effectRunnerMap.js)
+-   [effectRunnerMap.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/effectRunnerMap.js)
 
 ```
 import * as effectTypes from './effectTypes'
@@ -527,7 +526,7 @@ export default effectRunnerMap;
 
 ### 3.6 proc.js
 
--   [proc.js](https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/proc.js)
+-   [proc.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/proc.js)
 
 ```
 import effectRunnerMap from './effectRunnerMap';
@@ -559,7 +558,7 @@ export default function proc(env, iterator) {
 
 ### 3.7 effects.js
 
--   [effects.js](https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/effects.js)
+-   [effects.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/effects.js)
 
 ```
 import * as effectTypes from './effectTypes'
@@ -935,7 +934,7 @@ const effectRunnerMap = {
 export default effectRunnerMap;
 ```
 
-## 8 支持cps [#](http://zhufengpeixun.com/strong/html/113.redux-saga.html#t508%20%E6%94%AF%E6%8C%81cps)
+## 8 支持cps
 ### 8.1 sagas.js
 
 src\store\sagas.js
