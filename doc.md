@@ -17,7 +17,7 @@
 
 ![generatorexecflow](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/668da792858e420785e28ee5cf23ca6b~tplv-k3u1fbpfcp-zoom-1.image)
 
-```
+```js
 function* generator() {
     let a = yield 1;
     console.log(a);
@@ -56,7 +56,7 @@ console.log(r4);
 
 -   `throw`方法可以在函数体外部抛出错误，然后在函数里面捕获
 
-```
+```js
 function* generator() {
     try{
         let a = yield 1;
