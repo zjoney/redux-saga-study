@@ -79,7 +79,7 @@ console.log(r2);
 
 -   `throw`方法可以终止当前迭代器
 
-```
+```js
 function* generator() {
     try{
         let a = yield 1;
@@ -100,7 +100,7 @@ console.log(r2);
 
 ### 1.5 co
 
-```
+```js
 function co(generator) {
     let it = generator();
     let result;
@@ -127,7 +127,7 @@ co(generator);
 
 #### 1.7.1 使用
 
-```
+```js
 function* generator() {
     let a = yield 1;
     console.log(a);
