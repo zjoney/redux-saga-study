@@ -150,7 +150,7 @@ console.log(iterator.next('cValue'));  //{ value: undefined, done: true }
 
 ##### 1.7.2.1 generator.js
 
-```
+```js
 /* eslint-disable no-fallthrough */
 let regeneratorRuntime = require('./regeneratorRuntime');
 var _marked = regeneratorRuntime.mark(generator);
@@ -197,7 +197,7 @@ console.log(iterator.next('cValue'));  //{ value: undefined, done: true }
 
 ##### 1.7.2.2 regeneratorRuntime.js
 
-```
+```js
 class Context {
     next = 0;
     done = false;
