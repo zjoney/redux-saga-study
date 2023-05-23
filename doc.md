@@ -227,7 +227,7 @@ exports.wrap = (innerFn, outerFn) => {
 
 ### 2.1 初始化项目
 
-```
+```js
 create-react-app redux-saga-201112
 cd redux-saga-201112
 cnpm i redux react-redux redux-saga -S
@@ -242,7 +242,7 @@ cnpm i redux react-redux redux-saga -S
 
 src\store\action-types.js
 
-```
+```js
 export const ADD='ADD';
 ```
 
@@ -250,7 +250,7 @@ export const ADD='ADD';
 
 src\store\reducer.js
 
-```
+```js
 import * as actionTypes from './action-types';
 const reducer =  (state={number:0},action) => {
     switch(action.type){
@@ -267,7 +267,7 @@ export default reducer;
 
 src\store\index.js
 
-```
+```js
 import {createStore} from 'redux';
 import reducer from './reducer';
 let store=(createStore)(reducer);
@@ -278,7 +278,7 @@ export default store;
 
 src\store\actions.js
 
-```
+```js
 import * as actionTypes from './action-types';
 const actions = {
     add() {
@@ -292,7 +292,7 @@ export default actions;
 
 src\components\Counter.js
 
-```
+```js
 import React,{Component} from 'react'
 import {connect} from 'react-redux';
 import actions from '../store/actions';
@@ -316,7 +316,7 @@ export default connect(
 
 src\index.js
 
-```
+```js
 import React from 'react'
 import ReactDOM from 'react-dom';
 import Counter from './components/Counter';
@@ -333,7 +333,7 @@ ReactDOM.render(<Provider store={store}>
 
 src\store\sagas.js
 
-```
+```js
 import { put, take} from 'redux-saga/effects';
 import * as actionTypes from './action-types';
 
