@@ -395,13 +395,13 @@ export default store;
 
 ```js
 export { default } from './middleware';
-```
+``` 
 
 ### 3.2 middleware.js
 
 -   [middleware.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/middleware.js)
 
-```
+```js
 import { stdChannel } from './channel';
 import { runSaga } from './runSaga';
 
@@ -439,7 +439,7 @@ export default sagaMiddlewareFactory;
 
 -   [channel.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/channel.js)
 
-```
+```js
 export function stdChannel() {
   let currentTakers = [];
   function take(cb, matcher) {
@@ -472,7 +472,7 @@ export function stdChannel() {
 
 -   [runSaga.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/runSaga.js)
 
-```
+```js
 import proc from './proc';
 
 export function runSaga(
@@ -495,7 +495,7 @@ export function runSaga(
 #### 3.5 effectTypes.js
 src\redux-saga\effectTypes.js
 
-```
+```js
 export const TAKE = 'TAKE';
 export const PUT = 'PUT';
 ```
@@ -504,7 +504,7 @@ export const PUT = 'PUT';
 
 -   [effectRunnerMap.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/effectRunnerMap.js)
 
-```
+```js
 import * as effectTypes from './effectTypes'
 function runTakeEffect(env, {pattern}, cb) {
   const matcher = input => input.type === pattern;
@@ -528,7 +528,7 @@ export default effectRunnerMap;
 
 -   [proc.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/internal/proc.js)
 
-```
+```js
 import effectRunnerMap from './effectRunnerMap';
 
 export default function proc(env, iterator) {
@@ -560,7 +560,7 @@ export default function proc(env, iterator) {
 
 -   [effects.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/effects.js)
 
-```
+```js
 import * as effectTypes from './effectTypes'
 const makeEffect = (type, payload) => ({
   type,
