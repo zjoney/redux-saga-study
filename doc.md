@@ -350,7 +350,7 @@ export function* rootSaga() {
 
 src\store\action-types.js
 
-```
+```js
 export const ADD='ADD';
 +export const ASYNC_ADD='ASYNC_ADD';
 ```
@@ -359,7 +359,7 @@ export const ADD='ADD';
 
 src\store\actions.js
 
-```
+```js
 import * as actionTypes from './action-types';
 const actions = {
     add() {
@@ -373,7 +373,7 @@ export default actions;
 
 src\store\index.js
 
-```
+```js
 +import {createStore,applyMiddleware} from 'redux';
 import reducer from './reducer';
 +import createSagaMiddleware from 'redux-saga';
@@ -393,7 +393,7 @@ export default store;
 
 -   [index.js](https://github.com/zjoney/redux-saga-source/blob/master/packages/core/src/index.js)
 
-```
+```js
 export { default } from './middleware';
 ```
 
