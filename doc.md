@@ -582,7 +582,7 @@ export function put(action) {
 
 src\store\sagas.js
 
-```
+```js
 import { put, take} from 'redux-saga/effects';
 import * as actionTypes from './action-types';
 
@@ -603,7 +603,7 @@ export function* rootSaga() {
 
 src\redux-saga\is.js
 
-```
+```js
 export const func = f => typeof f === 'function';
 export const iterator = it => it && func(it.next) && func(it.throw);
 ```
