@@ -612,7 +612,7 @@ export const iterator = it => it && func(it.next) && func(it.throw);
 
 src\redux-saga\proc.js
 
-```
+```js
 import effectRunnerMap from './effectRunnerMap';
 +import * as is  from './is';
 +export default function proc(env, iterator,cont) {
@@ -654,7 +654,7 @@ import effectRunnerMap from './effectRunnerMap';
 
 src\store\sagas.js
 
-```
+```js
 +import { put, takeEvery} from '../redux-saga/effects';
 //import { put, take} from 'redux-saga/effects';
 import * as actionTypes from './action-types';
@@ -672,7 +672,7 @@ export function* rootSaga() {
 
 src\redux-saga\effectTypes.js
 
-```
+```js
 export const TAKE = 'TAKE';
 export const PUT = 'PUT';
 +export const FORK = 'FORK';
@@ -682,7 +682,7 @@ export const PUT = 'PUT';
 
 src\redux-saga\effects.js import * as effectTypes from './effectTypes'
 
-```
+```js
 const makeEffect = (type, payload) => ({
   type,
   payload
@@ -716,7 +716,7 @@ export function put(action) {
 
 src\redux-saga\effectRunnerMap.js
 
-```
+```js
 import * as effectTypes from './effectTypes'
 +import proc from "./proc";
 function runTakeEffect(env, {pattern}, cb) {
@@ -750,7 +750,7 @@ export default effectRunnerMap;
 
 src\store\sagas.js
 
-```
+```js
 import { put, takeEvery} from '../redux-saga/effects';
 //import { put, takeEvery} from 'redux-saga/effects';
 import * as actionTypes from './action-types';
