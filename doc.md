@@ -828,34 +828,33 @@ export default function proc(env, iterator,cont) {
 
     ### 7.1 sagas.js
 
-    src\store\sagas.js `` ` ``diff +import { put, takeEvery,call} from '../redux-saga/effects'; //import { put, takeEvery,call} from 'redux-saga/effects'; import * as actionTypes from './action-types'; const delay=ms => new Promise((resolve,reject) => { setTimeout(() => {
+    src\store\sagas.js 
 
-    ```
-    resolve();
-    ```
-
-    },ms); }); export function* add() {
-
--   yield call(delay,1000); yield put({type:actionTypes.ADD}); }
-
-export function* rootSaga() { yield takeEvery(actionTypes.ASYNC_ADD,add); }
-
-````
+    ```js
+     +import { put, takeEvery,call} from '../redux-saga/effects'; 
+     //import { put, takeEvery,call} from 'redux-saga/effects'; 
+     import * as actionTypes from './action-types'; 
+     const delay=ms => new Promise((resolve,reject) => { setTimeout(() => {
+        resolve();
+     },ms); }); export function* add() {
+      - yield call(delay,1000); yield put({type:actionTypes.ADD}); }
+      export function* rootSaga() { yield takeEvery(actionTypes.ASYNC_ADD,add); }
+  ```
 
 ### 7.2 effectTypes.js
 src\redux-saga\effectTypes.js
-```diff
+```js
 export const TAKE = 'TAKE';
 export const PUT = 'PUT';
 export const FORK = 'FORK';
 +export const CALL = 'CALL';
-````
+```
 
 ### 7.3 effects.js
 
 src\redux-saga\effects.js
 
-```
+```js
 const makeEffect = (type, payload) => ({
   type,
   payload
@@ -893,7 +892,7 @@ export function takeEvery(pattern, saga) {
 
 src\redux-saga\effectRunnerMap.js
 
-```
+```js
 import * as effectTypes from './effectTypes'
 import proc from "./proc";
 import * as is from './is';
