@@ -773,7 +773,7 @@ export function* rootSaga() {
 
 src\redux-saga\is.js
 
-```
+```js
 export const func = f => typeof f === 'function';
 export const iterator = it => it && func(it.next) && func(it.throw);
 +export const promise = p => p && func(p.then);
@@ -783,7 +783,7 @@ export const iterator = it => it && func(it.next) && func(it.throw);
 
 src\redux-saga\proc.js
 
-```
+```js
 import effectRunnerMap from './effectRunnerMap';
 +import * as is from './is';
 +function resolvePromise(promise, cb) {
