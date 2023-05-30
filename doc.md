@@ -938,7 +938,7 @@ export default effectRunnerMap;
 
 src\store\sagas.js
 
-```
+```js
 +import { put, takeEvery,call,cps} from '../redux-saga/effects';
 //import { put, takeEvery,call,cps} from 'redux-saga/effects';
 import * as actionTypes from './action-types';
@@ -962,7 +962,7 @@ export function* rootSaga() {
 
 src\redux-saga\is.js
 
-```
+```js
 export const func = f => typeof f === 'function';
 export const iterator = it => it && func(it.next) && func(it.throw);
 export const promise = p => p && func(p.then);
