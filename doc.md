@@ -973,7 +973,7 @@ export const promise = p => p && func(p.then);
 
 src\redux-saga\effectTypes.js
 
-```
+```js
 export const TAKE = 'TAKE';
 export const PUT = 'PUT';
 export const FORK = 'FORK';
@@ -985,7 +985,7 @@ export const CALL = 'CALL';
 
 src\redux-saga\effects.js
 
-```
+```js
 import * as effectTypes from './effectTypes'
 const makeEffect = (type, payload) => ({
   type,
@@ -1027,7 +1027,7 @@ export function call(fn, ...args) {
 
 src\redux-saga\effectRunnerMap.js
 
-```
+```js
 import * as effectTypes from './effectTypes'
 import proc from "./proc";
 import * as is  from './is';
