@@ -1088,7 +1088,7 @@ export default effectRunnerMap;
 
 src\store\sagas.js
 
-```
+```js
 import { put, takeEvery,call,cps,all,take} from '../redux-saga/effects';
 //import { put, takeEvery,call,cps,all,take} from 'redux-saga/effects';
 import * as actionTypes from './action-types';
@@ -1118,7 +1118,7 @@ export function* rootSaga() {
 
 src\redux-saga\effectTypes.js
 
-```
+```js
 export const TAKE = 'TAKE';
 export const PUT = 'PUT';
 export const FORK = 'FORK';
@@ -1131,7 +1131,7 @@ export const CPS = 'CPS';
 
 src\redux-saga\effects.js
 
-```
+```js
 import * as effectTypes from './effectTypes'
 const makeEffect = (type, payload) => ({
   type,
@@ -1176,7 +1176,7 @@ export function cps(fn, ...args) {
 
 src\redux-saga\utils.js
 
-```
+```js
 export function createAllStyleChildCallbacks(shape, parentCallback) {
     const keys = Object.keys(shape);
     const totalCount = keys.length;
@@ -1205,7 +1205,7 @@ export function createAllStyleChildCallbacks(shape, parentCallback) {
 
 src\redux-saga\effectRunnerMap.js
 
-```
+```js
 import proc from "./proc";
 import * as is  from './is';
 import * as effectTypes from './effectTypes'
@@ -1281,7 +1281,7 @@ export default effectRunnerMap;
 
 src\store\sagas.js
 
-```
+```js
 +import { put, takeEvery,call,cps,all,take,cancel,fork,delay} from '../redux-saga/effects';
 //import { put, takeEvery,call,cps,all,take,delay,cancel,fork} from 'redux-saga/effects';
 import * as actionTypes from './action-types';
