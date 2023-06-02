@@ -1307,7 +1307,7 @@ import * as actionTypes from './action-types';
 
 src\redux-saga\effectTypes.js
 
-```
+```js
 export const TAKE = 'TAKE';
 export const PUT = 'PUT';
 export const FORK = 'FORK';
@@ -1321,7 +1321,7 @@ export const ALL = 'ALL';
 
 src\redux-saga\effects.js
 
-```
+```js
 import * as effectTypes from './effectTypes'
 const makeEffect = (type, payload) => ({
   type,
@@ -1378,7 +1378,7 @@ export function all(effects) {
 
 src\redux-saga\effectRunnerMap.js
 
-```
+```js
 import proc from "./proc";
 import * as is  from './is';
 import * as effectTypes from './effectTypes'
