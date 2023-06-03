@@ -1456,7 +1456,7 @@ export default effectRunnerMap;
 
 src\redux-saga\symbols.js
 
-```
+```js
 export const  TASK_CANCEL = Symbol('TASK_CANCEL');
 ```
 
@@ -1464,7 +1464,7 @@ export const  TASK_CANCEL = Symbol('TASK_CANCEL');
 
 src\redux-saga\proc.js
 
-```
+```js
 import effectRunnerMap from './effectRunnerMap';
 +import {TASK_CANCEL} from './symbols';
 import * as is  from './is';
