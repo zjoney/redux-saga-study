@@ -1523,7 +1523,7 @@ export const ADD='ADD';
 
 src\store\actions.js
 
-```
+```js
 import * as actionTypes from './action-types';
 const actions = {
     add() {
