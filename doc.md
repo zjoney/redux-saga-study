@@ -1540,7 +1540,7 @@ export default actions;
 
 src\components\Counter.js
 
-```
+```js
 import React,{Component} from 'react'
 import {connect} from 'react-redux';
 import actions from '../store/actions';
